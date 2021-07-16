@@ -13,6 +13,7 @@ import mylib.about
 import mylib.box_char
 import mylib.clock_face
 import mylib.env
+import mylib.data_validation
 import mylib.file_log
 import mylib.gage
 import mylib.help
@@ -34,9 +35,9 @@ import mylib.SCRL_Notebook
 
 prog_id = {'progname': 'doc_str_verify.py',
            'title': 'MyLib Doc String User Validator',
-           'version': '1.2',
+           'version': '1.3',
            'date': "11 December 2020",
-           'rev_date': '22 January 2021',
+           'rev_date': '16 July 2021',
            'author': "Peter Hedlund",
            'description': 'To test the doc Strings for all modules in the'
                           'mylib library.'}
@@ -93,6 +94,22 @@ def v_env():
     scrn.log_scrn_color('get_env\n', 'cyan')
     scrn.log_scrn(mylib.env.get_env.__doc__+'\n')
 
+def v_data_validation():
+    scrn.log_scrn_color('__DATA_VALIDATION__\n', 'yellow')
+    scrn.log_scrn(mylib.data_validation.__doc__+'\n')
+    scrn.log_scrn_color(mylib.data_validation.get_full_lib_version() + '\n', 'blue')
+    scrn.log_scrn_color('get_lib_version\n', 'cyan')
+    scrn.log_scrn(mylib.data_validation.get_lib_version.__doc__+'\n')
+    scrn.log_scrn_color('get_full_lib_version\n', 'cyan')
+    scrn.log_scrn(mylib.data_validation.get_full_lib_version.__doc__+'\n')
+    scrn.log_scrn_color('checksum_8\n', 'cyan')
+    scrn.log_scrn(mylib.data_validation.checksum_8.__doc__+'\n')
+    scrn.log_scrn_color('checksum_16\n', 'cyan')
+    scrn.log_scrn(mylib.data_validation.checksum_16.__doc__+'\n')
+    scrn.log_scrn_color('crc16\n', 'cyan')
+    scrn.log_scrn(mylib.data_validation.crc16.__doc__+'\n')
+    scrn.log_scrn_color('crc16_CCITT\n', 'cyan')
+    scrn.log_scrn(mylib.data_validation.crc16_CCITT.__doc__+'\n')
 
 def v_file_log():
     scrn.log_scrn_color('__FILE_LOG__\n', 'yellow')
@@ -460,33 +477,34 @@ def quit_prog():
     root.destroy()
 
 my_data = (
-    # Verify    | enable | button Name      | program to run
-    (v_about,         1,  'About',           'about.py'),
-    (v_box_char,      1,  'Box Characters',  'box_char.py'),
-    (v_clock_face,    1,  'Clock Face',      'clock_face.py'),
-    (v_env,           0,  'Enviorment',      'env.py'),
-    (v_file_log,      1,  'File Logging',    'file_log.py'),
-    (v_gage,          1,  'Gage',            'gage.py'),
-    (v_help,          1,  'Help',            'help.py'),
-    (v_knob,          1,  'Knob',            'knob.py'),
-    (v_led_d,         1,  'Dual Leds',       'led_d.py'),
-    (v_led_r,         1,  'Round Leds',      'led.py'),
-    (v_led_s,         1,  'Square Leds',     'led_sq.py'),
-    (v_low_ascii,     0,  'Low Ascii',       'low_ascii.py'),
-    (v_my_math,       1,  'My Math',         'my_math.py'),
-    (v_p_types,       0,  'P Types',         'p_types.py'),
-    (v_print_colors,  0,  'Print Colors',    'print_colors.py'),
-    (v_scrl_notebook, 1,  'Scroll Notebook', 'scrl_notebook.py'),
-    (v_scrn_log,      1,  'Screen Log',      'scrn_log.py'),
-    (v_seven_seg,     1,  'Seven Segment',   'seven_seg.py'),
-    (v_16_seg,        1,  '16 Segment',      'sixteen_seg.py'),
-    (v_to_log,        1,  'To Log',          'to_log.py'),
+    # Verify       | enable | button Name      | program to run
+    (v_about,           1,  'About',           'about.py'),
+    (v_box_char,        1,  'Box Characters',  'box_char.py'),
+    (v_clock_face,      1,  'Clock Face',      'clock_face.py'),
+    (v_data_validation, 1,  'Data Validate',   'data_validation.py'),
+    (v_env,             0,  'Enviorment',      'env.py'),
+    (v_file_log,        1,  'File Logging',    'file_log.py'),
+    (v_gage,            1,  'Gage',            'gage.py'),
+    (v_help,            1,  'Help',            'help.py'),
+    (v_knob,            1,  'Knob',            'knob.py'),
+    (v_led_d,           1,  'Dual Leds',       'led_d.py'),
+    (v_led_r,           1,  'Round Leds',      'led.py'),
+    (v_led_s,           1,  'Square Leds',     'led_sq.py'),
+    (v_low_ascii,       0,  'Low Ascii',       'low_ascii.py'),
+    (v_my_math,         1,  'My Math',         'my_math.py'),
+    (v_p_types,         0,  'P Types',         'p_types.py'),
+    (v_print_colors,    0,  'Print Colors',    'print_colors.py'),
+    (v_scrl_notebook,   1,  'Scroll Notebook', 'scrl_notebook.py'),
+    (v_scrn_log,        1,  'Screen Log',      'scrn_log.py'),
+    (v_seven_seg,       1,  'Seven Segment',   'seven_seg.py'),
+    (v_16_seg,          1,  '16 Segment',      'sixteen_seg.py'),
+    (v_to_log,          1,  'To Log',          'to_log.py'),
 )
 
 root = Tk()
 root.resizable(0,0)
 root.title(prog_id['title']+'      Version : '+prog_id['version'])
-mainframe = ttk.Frame(root, padding='3', height=750, width=870)
+mainframe = ttk.Frame(root, padding='3', height=780, width=870)
 mainframe.grid(column=1, row=2, sticky=(N, W, E, S))
 mainframe.grid_propagate(0)
 root.protocol("WM_DELETE_WINDOW", quit_prog)
@@ -499,11 +517,11 @@ for x in range(0,ln):
                          command=partial(run_button, my_data[x][3]))
         btn.grid(column=1, row=x+2)
 ab = ttk.Button(mainframe, text='About', command=my_about_box)
-ab.grid(column=2, row=22)
+ab.grid(column=2, row=23)
 ab = ttk.Button(mainframe, text='Clear', command=my_clear_log)
-ab.grid(column=3, row=22)
+ab.grid(column=3, row=23)
 ab = ttk.Button(mainframe, text='Quit', command=quit_prog)
-ab.grid(column=4, row=22)
+ab.grid(column=4, row=23)
 
 ## ------------------------------------
 ##  Text box Widget

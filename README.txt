@@ -1,9 +1,16 @@
-"""
-mylib by Peter Hedlund  07/16/2021
-This is a collection of modules that i have written and placed into the
-mylib directory under c:/user/python????/Lib/mylib directory.
+Project name: my_lib 
+ 
+Author : Peter hedlund
 
-Current modules are
+Version : created in python 3.7
+
+Description: A collection of python modules I have created through the
+        years to make my life easier developing code.
+
+Table of Contents: 
+    doc_str_verify.pyw  - Program to test docstrings and demo modes of
+       modules in the library. It is not designed to be a callable module.
+
     About ------- Creates an about box of information
     box_char ---- 16 bit unicode characters for on screen boxes
     Clock_face -- Draws a clock face and sllow setting time on it
@@ -20,10 +27,17 @@ Current modules are
     my_math ----- A collection of math routines 
     p_types ----- C style type definitions for python structures
     print_colors  Use ansi escape codes for colored text and cursor moves
-    scrl_notebook Scrollable version of the Notebook widget
+    scrl_notebook Scrollable version of the Notebook widget ***
     scrn_log ---- Replacement for to_log easier to use. 
     seven_seg --- Draws seven segment displays 
     sixteen_seg - Draws 16 segment display (british fiag) alphanumeric
     to_log ------ Provides logging data to screen widget (Legacy Library)
 
-"""
+*** this module was NOT written by me see file for author information.
+
+Installation: In your python directory go to Lib and create mylib directory.
+        copy all files to this directory.  
+
+Usage: Most of the modules in this directory can be run stand alone and have
+        a short demo to show example useage.
+
