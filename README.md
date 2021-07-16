@@ -1,4 +1,3 @@
-# my_lib
 Project name: my_lib 
  
 Author : Peter hedlund
@@ -15,6 +14,7 @@ Table of Contents:
     About ------- Creates an about box of information
     box_char ---- 16 bit unicode characters for on screen boxes
     Clock_face -- Draws a clock face and sllow setting time on it
+    data_validate Checksum 8, Checksum 16, crc16 and crc16_CCITT Routines
     env --------- Reads / Writes enviromental variables (in Registry)
     file_log ---- Logs text string to files
     gage -------- Draws a gage and allows setting of the indicator
