@@ -4,6 +4,12 @@
 """ Knob.py 
 This is a knob indicator widget. It can be read and written to. The knob
 is user scalable as well as user colorable.
+knob(cnvs, mtr_info)
+get_lib_version()
+get_full_lib_version()
+show_angle(angl)
+draw_value(val)
+get_knob() returns current position
 """ 
 
 # #---------------------------------------------------------------------------

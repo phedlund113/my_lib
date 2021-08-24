@@ -5,7 +5,7 @@
 """ About Box
 get_lib_version() Show numeric version of library.
 get_lib_full_version()  Show numeric version and library filename.
-my_about_box()  Displays data from prog_id in an about box. 
+about_box()  Displays data from prog_id in an about box. 
 """
 
 

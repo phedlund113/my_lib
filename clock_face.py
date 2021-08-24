@@ -13,7 +13,10 @@
 #---------------------------------------------------------------------------
 """ See my_clock.__doc__ for details about this library. 
     get_lib_version() Show numeric version of library.
-    get_lib_full_version()  Show numeric version and library filename. 
+    get_lib_full_version()  Show numeric version and library filename.
+    my_clock() Create the clock face
+    show_time(self, h, m) Shows time in Hours and Mins.
+    show_full_time(self, h, m, s) Shows time in hours, Mins and secs.
 """
 
 import math

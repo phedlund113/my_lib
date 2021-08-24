@@ -5,7 +5,12 @@
 """ data_validation
 get_lib_version() Show numeric version of library.
 get_lib_full_version()  Show numeric version and library filename.
-my_about_box()  Displays data from prog_id in an about box. 
+checksum_8(pkt) Returns 8 byte checksum of all bytes in pkt
+checksum_16(pkt) Returns 16 byte checksum of all bytes in pkt
+crc16( st, crc) Given a binary string and starting CRC, Calc a final CRC-16
+crc16_CCITT(data : bytearray, offset , length)
+    Given a binary string and offset and length Calc a final CRC-16 CCITT
+
 """
 
 

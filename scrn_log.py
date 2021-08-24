@@ -7,10 +7,13 @@
     get_lib_full_version()  Show numeric version and library filename.
     log_scrn()  sends string to text window in last color
     log_scrn_color()  sends string to text window in color
+    log_scrn_raw() non colorized version without updateing every time.
         Acceptable colors are 'red','yellow','green','blue''cyan'
         'white', 'violet', sky blue, hot pink, lightgrey, and brown4
+    get_pos() returns x.y of cursor position of window.
     clear_scrn()  clears the text window
     save_scrn()  saves the text window to a user selected file
+    clipboard_scrn() returns a copy of the screen in the clipboard
 """
 
 from tkinter import *
